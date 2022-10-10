@@ -2,13 +2,43 @@
 // 2 = paper 
 // 3 = scissors 
 
+const buttons = document.querySelectorAll('button');
+const pScore = document.querySelector('.pScore');
+const cScore = document.querySelector('.cScore');
+const winnerp = document.querySelector('.winner');
+
+let pScoreInt = 0;
+let cScoreInt = 0;
+
+buttons.forEach(function(button) {
+
+    winnerp.textContent = ' ';
+
+    button.addEventListener('click' , function() {
+        game(button.dataset.num);
+    })
+})
+
+
+
+
+
+
+
+
+
+
+// helper functions
+
+
 function random() {
     return Math.floor(Math.random()*3) + 1;    // returns 1, 2 or 3
 }
 
-
 function winner(pSelection) {    // returns true if player wins and vica-versa, and null if its a tie
-    cSelection = random();
+    let cSelection = random();
+    pSelection = Number(pSelection)
+    cSelection = Number(cSelection)
 
     if (pSelection === cSelection) {
         return null;
@@ -33,23 +63,34 @@ function winner(pSelection) {    // returns true if player wins and vica-versa, 
             return false
         }
         return true;
-    }
+    } 
 }
 
+function game(pSelection) {
 
-function game() {
-    let pScore = 0;
-    let cScore = 0;
-
-    while (pScore !== 10 || cScore !== 10) {
-        let result = winner();
-
-        if (result) {
+    let result = winner(pSelection);
+    //while (pScore !== 10 || cScore !== 10) {
+    {
+        if (result != null) {
             if (result === true) {
-                pScore++;
+                pScoreInt++;
             } else {
-                cScore++;
+                cScoreInt++;
             }
         }
     }
+
+    if (pScoreInt === 5 || cScoreInt === 5) {
+
+        if (pScoreInt === 5) {
+            winnerp.textContent = 'You Won!!'
+        } else {
+            winnerp.textContent = 'You Lost ;('
+        }
+        pScoreInt = 0;
+        cScoreInt = 0;
+    }
+
+    pScore.textContent = pScoreInt;
+    cScore.textContent = cScoreInt;
 }
