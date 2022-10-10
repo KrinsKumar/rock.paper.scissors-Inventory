@@ -15,7 +15,6 @@ function generatesInventory() {    // sets the inventory for both of the players
     computerInventory = defaultInventory;
     userInventory = defaultInventory;
 }
-//---------PreGame----------------------------------------------------------------------------------------------
 
 
 //---------Game-------------------------------------------------------------------------------------------------
@@ -38,26 +37,20 @@ function checkLives(array) {    // checks the inventory of both players to get t
 function roundWinner(userIndex, computerIndex) {    // decides the winner of the round
     let userHand = full.indexOf(userInventory[userIndex]);
     if (userHand === -1) {userHand = half.indexOf(userInventory[userIndex]);}
-
     let computerHand = full.indexOf(computerInventory[computerIndex]);
     if (computerHand === -1) {computerHand = half.indexOf(computerInventory[computerInventory]);}
 
     if(userHand === computersHand) {return null}    // if there is a tie 
-
     if (userHand === 0) {
         if(computerHand === 1) {return false}
-        return true
-    }
+        return true }
     if (userHand === 1) {
         if(computerHand === 2) {return false}
-        return true
-    }
+        return true }
     if (userHand === 2) {
         if(computerHand === 0) {return false}
-        return true
-    }
+        return true }
 }
-
 
 function gameround(userIndex) {
     let computerIndex = computerRandom()
@@ -84,4 +77,7 @@ function gameround(userIndex) {
         else {computerInventory[computerHand] = `*`};
     }
 }
-//---------Game-------------------------------------------------------------------------------------------------
+
+//---------DOM--------------------------------------------------------------------------------------------------
+
+

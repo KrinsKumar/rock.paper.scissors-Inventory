@@ -1,1 +1,27 @@
+ .container {
+    justify-content: center;
+ }
+
+ .table {
+
+    display: flex;
+}
+
+.userTable, .computerTable {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.userTable div, .computerTable div {
+    display: flex;
+    max-width: 250px;
+} 
+
+.table div {
+    background: peachpuff;
+    border: 1px solid brown;
+    flex: 1 1 auto;
+    height: 10px;
+}
 
