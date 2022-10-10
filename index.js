@@ -1,7 +1,6 @@
 // 1 = rock
 // 2 = paper
 // 3 = scissors
-
 let computerInventory = [];
 let userInventory = [];
 let defaultInventory = [`R`,`R`,`R`,`P`,`P`,`P`,`S`,`S`,`S`];
@@ -22,12 +21,9 @@ function generatesInventory() {    // sets the inventory for both of the players
 //---------Game-------------------------------------------------------------------------------------------------
 function computerRandom() {    // generates a random number that representates computers hand
     let random = Math.floor(Math.random()*9); 
-
     let direction = Math.floor(Math.random()*2);    // to get a proper hand for the computer
     if (direction === 0) {direction = -1;}
-    while (computerInventory[random] === '*') {
-        random += direction
-    }
+    while (computerInventory[random] === '*') { random += direction }
     return random;
 }
 
@@ -41,7 +37,25 @@ function checkLives(array) {    // checks the inventory of both players to get t
 
 function roundWinner(userIndex, computerIndex) {    // decides the winner of the round
     let userHand = full.indexOf(userInventory[userIndex]);
+    if (userHand === -1) {userHand = half.indexOf(userInventory[userIndex]);}
+
     let computerHand = full.indexOf(computerInventory[computerIndex]);
+    if (computerHand === -1) {computerHand = half.indexOf(computerInventory[computerInventory]);}
+
+    if(userHand === computersHand) {return null}    // if there is a tie 
+
+    if (userHand === 0) {
+        if(computerHand === 1) {return false}
+        return true
+    }
+    if (userHand === 1) {
+        if(computerHand === 2) {return false}
+        return true
+    }
+    if (userHand === 2) {
+        if(computerHand === 0) {return false}
+        return true
+    }
 }
 
 
