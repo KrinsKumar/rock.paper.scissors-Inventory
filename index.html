@@ -9,43 +9,62 @@
   </head>
   <body>
     <div class="container">
-      <div class="table">
-        <div class="userTable">
-          <div class="top">
-            <div class="user-0"></div>
-            <div class="user-1"></div>
-            <div class="user-2"></div>
-          </div>
-          <div class="mid">
-            <div class="user-3"></div>
-            <div class="user-4"></div>
-            <div class="user-5"></div>
-          </div>
-          <div class="bot">
-            <div class="user-6"></div>
-            <div class="user-7"></div>
-            <div class="user-8"></div>
+      <div class="container-user">
+        <div class="score">
+          <div class="user-score"></div>
+          <div class="health-bar" id="bar-user" data-total="18">
+            <div class="bar">
+                <div class="hit"></div>
+            </div>
           </div>
         </div>
-        <div class="computerTable">
+        <div class="box" id="box-user">
           <div class="top">
-            <div class="computer-0"></div>
-            <div class="computer-1"></div>
-            <div class="computer-2"></div>
+            <div class="box-0 userElement"></div>
+            <div class="box-1 userElement"></div>
+            <div class="box-2 userElement"></div>
           </div>
           <div class="mid">
-            <div class="computer-3"></div>
-            <div class="computer-4"></div>
-            <div class="computer-5"></div>
+            <div class="box-3 userElement"></div>
+            <div class="box-4 userElement"></div>
+            <div class="box-5 userElement"></div>
           </div>
           <div class="bot">
-            <div class="computer-6"></div>
-            <div class="computer-7"></div>
-            <div class="computer-8"></div>
+            <div class="box-6 userElement"></div>
+            <div class="box-7 userElement"></div>
+            <div class="box-8 userElement"></div>
           </div>
         </div>
-    </div>
+        </div>
+        <div class="container-computer">
+          <div class="score">
+            <div class="computer-score"></div>
+            <div class="health-bar"  id="bar-computer" data-total="18">
+              <div class="bar">
+                <div class="hit"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box" id="box-computer">
+            <div class="top">
+              <div class="box-0"></div>
+              <div class="box-1"></div>
+              <div class="box-2"></div>
+            </div>
+            <div class="mid">
+              <div class="box-3"></div>
+              <div class="box-4"></div>
+              <div class="box-5"></div>
+            </div>
+            <div class="bot">
+              <div class="box-6"></div>
+              <div class="box-7"></div>
+              <div class="box-8"></div>
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
       <script src="index.js"></script>
-    </body>
+  </body>
 </html>
