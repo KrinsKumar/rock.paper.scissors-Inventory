@@ -30,19 +30,19 @@
 .box div .box-2,
 .box div .box-6,
 .box div .box-8 {
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 .box div .box-1,
 .box div .box-7 {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 
 .box div .box-3,
 .box div .box-5 {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
 }
 
 .health-bar {
@@ -62,7 +62,7 @@
     transition: width .5s linear;
   }
 
-  .hit {
+.hit {
     background: rgba(255,255,255,0.6);
     position: absolute;
     top: 0;
@@ -71,3 +71,21 @@
     width: 0px;
     transition: width .5s linear;
   }
+/* Grey shades = #464647 and #29292b*/
+.win-glow {
+    /*border: 3px solid  #4dcc7d !important; 
+    box-shadow: 0 0 0 10px #31b43a;*/
+    background-color: #4dcc7d;
+}
+
+.win-glow-2 {
+    background-color: #31b43a;
+}
+
+.lose-glow {
+    background-color: #fc121b;
+}
+
+.lose-glow-2 {
+    background-color: #d01115;
+}
