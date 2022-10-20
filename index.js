@@ -47,14 +47,6 @@ function computerRandom() {    // generates a random number that representates c
     return random;
 }
 
-function checkLives(array) {    // checks the inventory of both players to get the winner
-    livesLeft = array.filter(function() {
-        if (tools === `*`) {return false;}
-        return true;
-    });
-    return livesLeft.length;
-}
-
 function roundWinner(userIndex, computerIndex) {    // decides the winner of the round
     let userHand = full.indexOf(userInventory[userIndex]);
     if (userHand === -1) {userHand = half.indexOf(userInventory[userIndex]);}
