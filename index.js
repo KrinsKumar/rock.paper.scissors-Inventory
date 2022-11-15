@@ -100,10 +100,26 @@ function calculateScore(inventory) {
 
 function displayInventory() {
     for (let i = 0; i < userInventory.length; i++) {
-        userBox.querySelector(`.box-${i}`).innerHTML = userInventory[i];
+        if (userInventory[i] === 'r' || userInventory[i] === 'R') {
+            userBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/rock.svg" alt="rock">';
+        }
+        if (userInventory[i] === 'p' || userInventory[i] === 'P') {
+            userBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/paper.svg" alt="paper">';
+        }
+        if (userInventory[i] === 's' || userInventory[i] === 'S') {
+            userBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/scissor.svg" alt="scissor">';
+        }
     }
     for (let i = 0; i < computerInventory.length; i++) {
-        computerBox.querySelector(`.box-${i}`).innerHTML = computerInventory[i];
+        if (userInventory[i] === 'r' || computerInventory[i] === 'R') {
+            computerBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/rock.svg" alt="rock">';
+        }
+        if (userInventory[i] === 'p' || computerInventory[i] === 'P') {
+            computerBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/paper.svg" alt="paper">';
+        }
+        if (userInventory[i] === 's' || computerInventory[i] === 'S') {
+            computerBox.querySelector(`.box-${i}`).innerHTML = '<img src="img/scissor.svg" alt="scissor">';
+        }
     }
 }
 
