@@ -125,7 +125,7 @@ function displayInventory() {
     User and computer has 3 of all that is rock paper and scissors. 
     When a piece from inventory is selected computer selects a piece randomly 
     If the user wins the durability of the selected item gets half and if the durability is already half, nothing happens
-    If the user loosese, He looses the selected item
+    If the user looses, He looses the selected item
     If there is a tie both of the selected item looses the durability and if the durablity is already half nothing happens
 */ 
 
